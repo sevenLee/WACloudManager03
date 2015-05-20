@@ -1,0 +1,1 @@
+﻿.sidebar{height:100%;background-color:#fafafa;margin-right:-17px;overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch}.sidebar:after{content:"";background-color:#aaa;position:absolute;display:block;top:0;bottom:0;right:0;width:1px;-webkit-transform:translateZ(0)}.sidebar>.nav{position:relative;padding-right:17px;border:1px solid red}

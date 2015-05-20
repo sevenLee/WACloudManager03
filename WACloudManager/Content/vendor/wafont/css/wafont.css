@@ -1,0 +1,47 @@
+/* Cascading Style Sheet (css) for font Wa-Cloud */
+@font-face{
+	font-family:Wa-Cloud;
+	src:url(../fonts/Wa-Cloud.eot);
+	src:url(../fonts/Wa-Cloud.eot?#iefix) format('embedded-opentype'),url(../fonts/Wa-Cloud.woff) format('woff'),url(../fonts/Wa-Cloud.ttf) format('truetype'),url(../fonts/Wa-Cloud.svg#Wa-Cloud) format('svg');
+	font-weight:400;
+	font-style:normal
+}
+
+[data-cloudfont]:before{
+	font-family:Wa-Cloud;
+	content:attr(data-icon);
+	speak:none;
+	font-weight:400;
+	font-variant:normal;
+	text-transform:none;
+	line-height:1;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale
+}
+
+
+.cloudfont-account:before,
+.cloudfont-dashboard:before,
+.cloudfont-device:before,
+.cloudfont-center:before,
+.cloudfont-modeling:before, 
+.cloudfont-group:before, 
+.cloudfont-mainten:before{
+
+	font-family:Wa-Cloud;
+	speak:none;
+	font-style:normal;
+	font-weight:400;
+	font-variant:normal;
+	text-transform:none;
+	line-height:1;
+	-webkit-font-smoothing:antialiased;
+} 
+
+.cloudfont-account:before { content: "\e001"; }
+.cloudfont-dashboard:before { content: "\e007"; }
+.cloudfont-device:before { content: "\e00f"; }
+.cloudfont-center:before { content: "\e06a"; }
+.cloudfont-modeling:before { content: "\e077"; }
+.cloudfont-group:before { content: "\e0a2"; }
+.cloudfont-mainten:before { content: "\e0a3"; }

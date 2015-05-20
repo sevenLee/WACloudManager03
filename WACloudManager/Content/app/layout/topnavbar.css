@@ -1,0 +1,43 @@
+.navbar {
+  height: 40px;
+  min-height: 40px;
+}
+.topnavbar {
+  -webkit-backface-visibility: hidden;
+  /* fixes chrome jump */
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #34495e;
+  z-index: 1050;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.topnavbar .navbar-header {
+  font-size: 18px;
+  line-height: 40px;
+  float: left;
+  color: #ffffff;
+}
+.topnavbar .navbar-header a.navbar-brand {
+  color: #ffffff;
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 0px;
+  font-size: 18px;
+}
+.topnavbar .navbar-header a.navbar-brand .fa-cloud {
+  width: 20px;
+  margin: auto 0 auto 5px;
+}
+.topnavbar .navbar-header .sub-subject {
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 5px;
+  line-height: 40px;
+  float: left;
+}
+.topnavbar .navbar-header .sub-subject:hover {
+  text-decoration: none;
+  color: #ffffff;
+}

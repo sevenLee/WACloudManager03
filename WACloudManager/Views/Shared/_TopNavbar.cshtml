@@ -1,0 +1,20 @@
+﻿
+<nav role="navigation" class="navbar topnavbar">
+    <span class="navbar-header">
+        <a href="#" class="navbar-brand">
+            <i class="fa fa-cloud"></i>
+            WebAccess Cloud
+        </a>
+        <a href="#" class="sub-subject">&nbsp;/Manager</a>
+
+    </span>
+
+    
+    <div class="nav-wrapper">
+        @if (Session["Account.AccountID"] != null)
+        {
+            <div>I'm:  @Session["Account.UserName"]@@@Session["Domain.DomainName"] </div>
+        }
+    </div>
+    
+</nav>

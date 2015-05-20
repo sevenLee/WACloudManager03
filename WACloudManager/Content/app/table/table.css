@@ -1,0 +1,18 @@
+.table.table1 {
+  border-bottom: 1px solid #0a5775;
+  background: #ffffff;
+  color: #000000;
+}
+.table.table1 > thead {
+  color: #ffffff;
+  font-weight: 700;
+  background: #4499bb;
+}
+.table.table1 > thead > tr > th {
+  border: none;
+}
+.table.table1 > tbody > tr > td {
+  line-height: 2;
+  vertical-align: middle;
+  border: none;
+}

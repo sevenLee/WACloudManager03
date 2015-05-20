@@ -1,0 +1,94 @@
+.sidebar {
+  height: 100%;
+  background-color: #fafafa;
+  margin-right: -17px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.sidebar:after {
+  content: "";
+  background-color: #aaaaaa;
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  -webkit-transform: translateZ(0px);
+}
+.sidebar > .nav {
+  position: relative;
+}
+.sidebar > .nav > li > a,
+.sidebar > .nav > li > .nav-item {
+  padding: 12px 20px;
+  color: #7c7f83;
+  letter-spacing: .025em;
+  font-weight: normal;
+}
+.sidebar > .nav > li > a:before,
+.sidebar > .nav > li > .nav-item:before,
+.sidebar > .nav > li > a:after,
+.sidebar > .nav > li > .nav-item:after {
+  content: " ";
+  display: table;
+}
+.sidebar > .nav > li > a:after,
+.sidebar > .nav > li > .nav-item:after {
+  clear: both;
+}
+.sidebar > .nav > li > a:focus,
+.sidebar > .nav > li > .nav-item:focus,
+.sidebar > .nav > li > a:hover,
+.sidebar > .nav > li > .nav-item:hover,
+.sidebar > .nav > li > a:focus > em,
+.sidebar > .nav > li > .nav-item:focus > em,
+.sidebar > .nav > li > a:hover > em,
+.sidebar > .nav > li > .nav-item:hover > em,
+.sidebar > .nav > li > a:focus > span,
+.sidebar > .nav > li > .nav-item:focus > span,
+.sidebar > .nav > li > a:hover > span,
+.sidebar > .nav > li > .nav-item:hover > span {
+  text-decoration: none;
+  outline: none;
+  color: #0088cc;
+}
+.sidebar > .nav > li > a > em,
+.sidebar > .nav > li > .nav-item > em {
+  width: 2em;
+  float: left;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.sidebar > .nav > li > a > span,
+.sidebar > .nav > li > .nav-item > span {
+  display: inline-block;
+  float: left;
+  text-decoration: none;
+  outline: none;
+  line-height: 24px;
+}
+.sidebar-subnav {
+  background-color: #dedede;
+}
+.sidebar-subnav > li > a,
+.sidebar-subnav > li > .nav-item {
+  display: block;
+  padding: 10px 20px;
+  padding-left: 60px;
+  position: relative;
+  font-weight: normal;
+  background-color: transparent !important;
+  color: #7c7f83;
+}
+.sidebar-subnav > li > a:focus,
+.sidebar-subnav > li > .nav-item:focus,
+.sidebar-subnav > li > a:hover,
+.sidebar-subnav > li > .nav-item:hover {
+  color: #084057;
+}

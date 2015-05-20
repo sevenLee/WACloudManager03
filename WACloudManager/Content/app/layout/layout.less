@@ -1,0 +1,168 @@
+﻿@aside-wd:                                240px;
+@aside-bg:                                #fff;
+
+@content-bg:                              #fff;
+@content-heading-bg:                      #fff;
+@content-heading-border:                  #cfdbe2;
+@content-padding:                         20px;
+
+@navbar-hg:                               40px;
+
+@boxed-max-width:                         1140px;
+@z-index-main-section:                    111;
+
+html {
+  /* @replace rtl */ direction: ltr;
+  height: 100%;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  background-color:@content-bg;
+}
+
+html, body {
+  // overflow-x: hidden;
+  height: 100%;
+  background-color:@content-bg;
+
+}
+
+// Main wrapper
+// -----------------------------
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+
+  > .aside {
+    // visibility: hidden;
+    position: absolute;
+    width: @aside-wd;
+    
+    top: 0; left: 0;
+    bottom: 0;
+    z-index: @z-index-main-section - 1; // Hides behind the main section
+    // .transition(visibility 0s linear .3s);
+    .backface-visibility(hidden);
+    background-color: @aside-bg;
+
+    .aside-inner{
+        padding-top:@navbar-hg;
+        height:100%;
+        width:@aside-wd;
+        overflow:hidden;
+    }   
+  }
+
+   //the Main content
+   > section{
+       position:relative;
+       height:100%;
+       margin-left:0;
+       background-color:@content-bg;
+     
+   }
+}
+
+// Page wrapper
+// -----------------------------
+.content-wrapper{
+	padding:15px;
+	width:100%;
+	//border-top:1px solid #ff0000;
+
+  > h3,
+	> .content-heading {
+      font-size:24px;
+	    color: #000000;
+	    margin: -15px;
+	    margin-bottom: 30px;
+	    padding: 20px 15px;
+	    font-weight: normal;
+	    background-color: @content-heading-bg;
+	    border-bottom: 1px solid @content-heading-border;
+	    
+	    > small {
+	      display: block;
+	      font-size: 12px;
+	      color: @text-muted;
+	    }
+	}	
+}
+
+// Desktop layout
+// -----------------------------
+
+@media @tablet {
+
+  body {
+    min-height: 100%;
+  }
+
+  .wrapper {
+    
+    > .aside {
+      z-index: @z-index-main-section + 5;
+      
+      .aside-inner {
+        padding-top: @navbar-hg;
+      }
+    }
+
+    > section,
+    > footer {
+      margin-left: @aside-wd;
+    }
+
+    > section {
+      // with just a margin we can make the 
+      // right sidebar always visible
+      &.has-sidebar-right {
+        margin-right: @aside-wd + 20;
+        + .offsidebar {
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+}
+
+// Fixed layout
+// -----------------------------
+.layout-fixed {
+  .wrapper {
+    .topnavbar-wrapper {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: @z-index-main-section + 10;
+    }
+    > aside {
+      position: fixed;
+    }
+    /* only applied to sidebar */
+    > .aside {
+      /* safari fix */
+      height: 1px;
+      min-height: 100%;
+      /* ios blanks space fix */
+      > .aside-inner {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+      }
+    }
+    > section {
+      //margin-top: (@navbar-hg + 2.5) * 2;
+      margin-top: @navbar-hg;
+
+      @media @tablet {
+        margin-top: @navbar-hg;
+      }
+    }
+  }
+
+
+}

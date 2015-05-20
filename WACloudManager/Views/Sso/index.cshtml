@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "SSo Page";
+}
+
+<h2>@ViewBag.Message</h2>
+<ul>
+@for (var i =0 ; i <Session.Count ;i++)
+{
+    var curName = Session.Keys[i];
+   <li> @curName "=" @Session[curName]  </li>
+}
+</ul>
+

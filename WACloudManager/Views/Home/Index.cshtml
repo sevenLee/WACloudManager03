@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Main";
+}
+<!-- top navbar: Home is Controller, Partials is Action in Controller-->
+<header ng-include="'/Home/Partials/_TopNavbar'" class="topnavbar-wrapper"></header>
+<!-- sidebar-->
+<aside ng-include="'/Home/Partials/_Sidebar'" ng-controller="sidebarCtrl" class="aside"></aside>
+
+<!-- Main section-->
+<section>
+    <!-- Page content-->
+    <!--<div>{{go}}</div>-->
+
+    <div ui-view="" autoscroll="false" ng-class="app.viewAnimation" class="content-wrapper"></div>
+</section>

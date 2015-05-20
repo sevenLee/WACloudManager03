@@ -1,0 +1,29 @@
+﻿
+@{
+    // This is requried for AngularJS because we have to send only the view markup (not within the layout)
+    Layout = null;
+    ViewBag.Title = "Home";
+}
+
+<h3>Domain Infomation</h3>
+
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table table1 text-center">
+            <thead>
+                <tr>
+                    <th class="text-center">Domain Name</th>
+                    <th class="text-center">Cloud Access Pass Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{vm.domainInfo.name}}</td>
+                    <td>{{vm.domainInfo.passCode}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
